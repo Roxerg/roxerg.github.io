@@ -1,0 +1,97 @@
+
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 500px;
+	height: 300px;
+	margin: auto;
+	/*position: relative */
+	padding: 62px 0;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+
+.center {
+	margin: auto;
+	border:3px solid #F8F8F9;
+    width: 100%;
+    padding 0px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+	transition: 0.3s;
+	border-radius: 5px;
+	/* background-image: linear-gradient(to top right,#0F0F2A , #000006); */
+	background-image: linear-gradient(to top right, whitesmoke, #F4F4F6);
+	font-family: "Verdana", Arial;
+	
+}
+
+.text {
+	padding: 5px 5px;
+	margin:auto;
+	
+}
+
+h2 {
+	/* #4C4CB8 */
+	color: #4C4CB8;
+}
+
+h5 {
+	color: #101039 ;
+}
+
+a:link { 
+	color: #4C4CB8;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #4C4CB8;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #101039;
+	text-decoration: none;
+}
+
+.pic {
+	border-radius: 50%;
+	border: 2px solid #4C4CB8;
+
+}
