@@ -113,8 +113,13 @@ img {
 
 
 .claw {
-    height: 33.3%;
-    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.haiku {
+    max-width: 100%;
+    height: auto;
 }
 
 .ggj {
