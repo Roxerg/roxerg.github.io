@@ -63,6 +63,10 @@ img {
  
 }
 
+.middle {
+    vertical-align: middle;
+}
+
 .compbox {
     display: block;
     position: relative;
@@ -111,6 +115,10 @@ img {
   }
 
 
+.work {
+    max-width: 70%;
+    height: auto;
+}
 
 .claw {
     max-width: 100%;
