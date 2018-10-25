@@ -1,11 +1,12 @@
 <html lang = "en">
 <head>
-    <title>Rokas Gudavicius</title>
+    <title>Rokas Gudavičius</title>
     <meta charset = "utf-8">
     <meta name = "description" content = "who i am and what i do">
     <meta name = "author" content = "Rokas Gudavicius">
 
     <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "css/fonts.css">
 </head>
 
 <body>
@@ -14,17 +15,26 @@
 
 <div class="container">
   <div class="item"></div>
-  <div class="item">
+  <div class="item" id="ohfuck">
     <b>Rokas Gudavicius</b>
     <br>
-    Hey, I'm a <b id="yearstudent">aaa</b> Year Computer Science student at University of Edinburgh.
-    I work at <a href="https://clockworktrader.com/">Clockwork</a>. I'm also Vice President of <a href="https://comp-soc.com/">CompSoc</a>. 
+    Hey, I'm a 2nd Year Computer Science student at University of Edinburgh.
+    <br>
+    I work at <a href="https://clockworktrader.com/">Clockwork</a>. 
+    I'm also Vice President of <a href="https://comp-soc.com/">CompSoc</a>.
+    <br>
+    Here are some <a href="projects.html">projects</a> I did and <a href="events.html">events</a> I participated in. 
+    <br><br>
+    rgudav@gmail.com
+    ● <a href="https://github.com/Roxerg">github</a>
+    ● <a href="https://www.linkedin.com/in/rokas-gudavi%C4%8Dius-28250ab6/">linkedin</a>
+    ● <a href="https://twitter.com/roxerg1/">twitter</a>
+    <br>
+    the work is never d
 
-
-
-
-
-
+    <!-- 
+    
+    --> 
 
 
   </div>
@@ -33,10 +43,35 @@
 </div>
 
 <script>
-  var
-  currDate = (new Date()).getFullYear()
-  var val = currDate-2016;
-  document.getElementById("yearstudent").innerHTML=val;
+    var seconds = new Date().getTime() / 1000;
+    var content = "<b>Rokas Gudavicius</b\> <br> Hey, I\'m a 2nd Year Computer Science student at University of Edinburgh\. \<br\> I work at <a href=\"https://clockworktrader.com/\">Clockwork</a>\. I\'m also Vice President of <a href=\"https://comp-soc.com/\">CompSoc</a>\. \<br\> Here are some <a href=\"projects.html\">projects</a> I did and <a href=\"events.html\">events</a> I participated in. \<br\>\<br\> rgudav@gmail.com ● \<a href=\"https://github.com/Roxerg\">github</a> ● \<a href=\"https://www.linkedin.com/in/rokas-gudavi%C4%8Dius-28250ab6/\">linkedin</a> ● \<a href=\"https://twitter.com/roxerg1/\">twitter</a> \<br\> the work is never d"
+    var markerer = "<b class=\"mono\" id=marker>_</b>";
+    var printed = ""
+    var idx = 0
+    var endat = content.length;
+    
+    var x = '_'
+    var marker = setInterval(function() {
+
+      if (idx < endat) {
+      printed += content[idx];
+      document.getElementById("ohfuck").innerHTML=(printed+markerer); 
+      idx++;
+      }
+      
+      if (((new Date().getTime() / 1000) - seconds) > 1 && (idx == endat)) {
+        seconds = new Date().getTime() / 1000;
+        if (x == '_') {
+        document.getElementById("marker").innerHTML=x
+        x = ' '
+        }
+        else {
+        document.getElementById("marker").innerHTML=x  
+        x = '_'
+        }
+      }
+
+  },1);
 </script>
 </body>
 

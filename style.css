@@ -1,10 +1,30 @@
+
+
 html, body {
 	height: 100%;
 }
 
+html {
+    font-family: "Courier New", sans-serif;
+}
+
 body {
 	margin: 0;
+	background-color: whitesmoke;
 }
+
+a {
+	color: orangered;
+	text-decoration: none;
+	}
+
+.mono {
+	font-family: monospace;
+}
+
+span.hidden{ 
+	display:none; 
+} 
 
 
 .container {
@@ -26,13 +46,13 @@ body {
 }
 
 .item {
-	background-color: tomato;
+	background-color: black;
 	padding: 10px;
 	width: 50%;
-	height: 20%;
+	height: auto;
 	margin: 10px;
 	line-height: 40px;
 	color: white;
-	font-size: 2em;
+	font-size: 1em;
 	text-align: center;
 }
