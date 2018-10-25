@@ -45,6 +45,21 @@ span.hidden{
 
 }
 
+@media (max-width: 768px) {
+    /* For mobile phones: */
+    .item {
+		background-color: black;
+		padding: 10px;
+		width: 80%;
+		height: auto;
+		margin: 10px;
+		line-height: 40px;
+		color: white;
+		font-size: 1.4em;
+		text-align: center;
+	}
+}
+@media (min-width: 769px) {
 .item {
 	background-color: black;
 	padding: 10px;
@@ -55,4 +70,5 @@ span.hidden{
 	color: white;
 	font-size: 1em;
 	text-align: center;
+}
 }
