@@ -1,7 +1,7 @@
 
 
-html, body {
-	height: 100%;
+body {
+	min-height: 100vh;
 }
 
 html {
@@ -33,20 +33,46 @@ span.hidden{
 	margin: 0;
 
 	/* looks */
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
 	display: flex;
-
 	justify-content: center;
 	align-items: center;  /* baseline, center, stretch */
 	flex-direction: column;
 
 }
 
+.container_projects {
+	
+}
+
+.item {
+	background-color: black;
+	padding: 10px;
+	width: 100%;
+	height: auto;
+	margin: 10px;
+	line-height: 40px;
+	color: white;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	.item {
+		background-color: black;
+		padding: 10px;
+		width: 80%;
+		height: auto;
+		margin: 10px;
+		line-height: 40px;
+		color: white;
+		font-size: 1em;
+		text-align: center;
+	}
+}
+
+/*
 @media (max-width: 768px) {
-    /* For mobile phones: */
+    /* For mobile phones: * /
     .item {
 		background-color: black;
 		padding: 10px;
@@ -71,4 +97,49 @@ span.hidden{
 	font-size: 1em;
 	text-align: center;
 }
+/*
+
+
+.item_decor5 {
+	padding-bottom: 5px;
+	padding-top: 	5px;
+	padding-left: 	10px;
+	padding-right: 	10px;
+	width: 50%;
+	height: auto;
+	margin: 10px;
+	background-color: black;
 }
+.item_decor2 {
+	padding-bottom: 2.5px;
+	padding-top: 	2.5px;
+	padding-left: 	10px;
+	padding-right: 	10px;
+	width: 50%;
+	height: auto;
+	margin: 10px;
+	background-color: black;
+}
+
+.item_decor1 {
+	padding-bottom: 1.25px;
+	padding-top: 	1.25px;
+	padding-left: 	10px;
+	padding-right: 	10px;
+	width: 50%;
+	height: auto;
+	margin: 10px;
+	background-color: black;
+}
+
+.item_decor0 {
+	padding-bottom: 1px;
+	padding-top: 	1px;
+	padding-left: 	10px;
+	padding-right: 	10px;
+	width: 50%;
+	height: auto;
+	margin: 10px;
+	background-color: black;
+}
+*/

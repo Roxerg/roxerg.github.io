@@ -1,0 +1,87 @@
+<html lang = "en">
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Rokas Gudavičius</title>
+    <meta charset = "utf-8">
+    <meta name = "description" content = "who i am and what i do">
+    <meta name = "author" content = "Rokas Gudavicius">
+    
+    <link rel = "stylesheet" href = "style.css">
+    <link rel = "stylesheet" href = "css/fonts.css">
+</head>
+
+<body>
+    
+    
+    
+    <div class="container">
+        <div class="item"></div>
+        <div class="item" id="ohfuck"></div>
+        <div class="item"></div>
+        
+    </div>
+    
+    <script>
+        var seconds = new Date().getTime() / 1000;
+        var content = ""
+        var markerer = "<b class=\"mono\" id=marker>_</b>";
+        var printed = ""
+        var idx = 0
+        var endat = content.length;
+        
+        var x = '_'
+        var marker = setInterval(function() {
+            
+            if (idx < endat) {
+                var c = content[idx];
+                
+                if (c == '<') {
+                    idx++;
+                    while(!c.endsWith('\>')) {
+                        c += content[idx];
+                        idx++;
+                    }
+                    c += content[idx];
+                }
+                
+                printed += c;
+                document.getElementById("ohfuck").innerHTML=(printed+markerer); 
+                idx++;
+            }
+            
+            if (((new Date().getTime() / 1000) - seconds) > 1 && (idx == endat)) {
+                seconds = new Date().getTime() / 1000;
+                if (x == '_') {
+                    document.getElementById("marker").innerHTML=x
+                    x = ' '
+                }
+                else {
+                    document.getElementById("marker").innerHTML=x  
+                    x = '_'
+                }
+            }
+            
+        },1);
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
