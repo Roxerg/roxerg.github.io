@@ -54,9 +54,20 @@
     var marker = setInterval(function() {
 
       if (idx < endat) {
-      printed += content[idx];
-      document.getElementById("ohfuck").innerHTML=(printed+markerer); 
-      idx++;
+        var c = content[idx];
+
+        if (c == '<') {
+          idx++;
+          while(!c.endsWith('\>')) {
+            c += content[idx];
+            idx++;
+          }
+          c += content[idx];
+        }
+        
+        printed += c;
+        document.getElementById("ohfuck").innerHTML=(printed+markerer); 
+        idx++;
       }
       
       if (((new Date().getTime() / 1000) - seconds) > 1 && (idx == endat)) {
