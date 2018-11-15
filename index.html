@@ -24,12 +24,12 @@
     <br>
     Hey, I'm a 2nd Year Computer Science student at University of Edinburgh.
     <br>
-    I work at <a href="https://clockworktrader.com/">Clockwork</a>. 
+    I work at <a href="https://clockworktrader.com/">Clockwork</a>.
     I'm also Vice President of <a href="https://comp-soc.com/">CompSoc</a>.
     <br>
-    Here are some <a href="projects.html">projects</a> I did and <a href="events.html">events</a> I participated in. 
+    Here are some <a href="projects.html">projects</a> I did and <a href="events.html">events</a> I participated in.
     <br><br>
-    <a href="mailto:rgudav@gmail.com>rgudav@gmail.com</a>
+    <a href="mailto:rgudav@gmail.com">rgudav@gmail.com</a>
     ● <a href="https://github.com/Roxerg">github</a>
     ● <a href="https://www.linkedin.com/in/rokas-gudavi%C4%8Dius-28250ab6/">linkedin</a>
     ● <a href="https://twitter.com/roxerg1/">twitter</a>
@@ -37,9 +37,9 @@
     <br>
     the work is never d
 
-    <!-- 
-    
-    --> 
+    <!--
+
+    -->
 
 
   </div>
@@ -54,7 +54,7 @@
     var printed = ""
     var idx = 0
     var endat = content.length;
-    
+
     var x = '_'
     var marker = setInterval(function() {
 
@@ -70,12 +70,12 @@
           }
           c += content[idx];
         }
-        
+
         printed += c;
-        document.getElementById("ohfuck").innerHTML=(printed+markerer); 
+        document.getElementById("ohfuck").innerHTML=(printed+markerer);
         idx++;
       }
-      
+
       if (((new Date().getTime() / 1000) - seconds) > 1 && (idx == endat)) {
         seconds = new Date().getTime() / 1000;
         if (x == '_') {
@@ -83,7 +83,7 @@
         x = ' '
         }
         else {
-        document.getElementById("marker").innerHTML=x  
+        document.getElementById("marker").innerHTML=x
         x = '_'
         }
       }
