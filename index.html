@@ -142,10 +142,10 @@
                      "Philosopher", "Reader", "This one is just for breaking my own page ahhaahahahahahaha", "Traveller", "Surfer",
                     "Internet Person", "Corporation", "Google", "Dad", "Mom", "Friend", "You", "Me?!"]
             var idxx = Math.floor((Math.random() * titles.length));
-            while (last_id == idx) {
+            while (last_id == idxx) {
                 idxx = Math.floor((Math.random() * titles.length));
             } 
-            document.getElementById("hello").innerHTML = titles[idx];
+            document.getElementById("hello").innerHTML = titles[idxx];
 
           }
             
