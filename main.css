@@ -86,7 +86,7 @@ a {
 
 
 .line:hover {
-    background-color: green;
+    background-color: rgb(59, 59, 59);
     height: 3.6em;
 }
 
@@ -234,13 +234,11 @@ a {
 
     .container {
         width: 100%;
-        background-color: green;
     }
 
     .item {
         width: 100%;
         height: 100%;
-        background-color: green;
         font-size: 2.5em;
         flex-wrap: wrap;
     }
