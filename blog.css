@@ -17,6 +17,7 @@ html {
 }
 
 button, input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
 	background: none;
 	color: inherit;
 	border: none;
