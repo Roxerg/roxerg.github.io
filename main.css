@@ -1,0 +1,251 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Abel";
+}
+
+a {
+    text-decoration: none;
+    font-weight:bold;
+}
+
+/* unvisited link */
+  a:link {
+    color: orangered;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(218, 58, 0);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(255, 118, 68);
+  }
+  
+  /* selected link */
+  a:active {
+    color: orangered;
+  }
+
+.transparent {
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in-out;
+}
+.transparent:hover {
+    opacity: 0.4;
+}
+.name {
+    font-size: 0.8em !important;
+    text-align: center;
+    justify-content: center;
+    justify-self: center;
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+.line {
+    height: 1.2em;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    text-align:left;
+    margin-left:0.5em;
+    margin-top:5px;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.firstline {
+    padding-top: 0.5em;
+    overflow:hidden;
+}
+
+.bigpro {
+    height: 1em;
+    font-size: 0.9em;
+    line-height: 0.7em;
+    text-align:center;
+    margin-left:0em;
+    margin-top:0px;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.bigboi {
+    font-size: 0.6em;
+    line-height: 1.2em;
+    text-align:left;
+    margin-left:0.2em;
+    margin-right: 0.2em;
+    margin-top:5px;
+    transition: height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+.line:hover {
+    background-color: rgb(59, 59, 59);
+    height: 3.6em;
+}
+
+
+#ohfuck {
+    font-size: 0.8em;
+    text-align: center; 
+    
+}
+
+.aaa {
+    flex-grow: 1;
+    overflow: hidden;
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+
+.container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.tg {
+    height: 100%;
+
+}
+
+.row {
+    width: 100%;
+    height: 100%;
+    border: 1px none blue;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.gr2:hover .gt {
+    flex-grow: 0;
+    height: 0px;
+    background-color: blue;
+}
+
+
+
+.item {
+    background-color: transparent;
+    padding: 5px;
+    width: 35%;
+    height: 62%;
+    margin: 10px;
+    line-height: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+
+.itm {
+    background-color: black;
+    padding: 5px;
+    margin: 5px;
+    line-height: 1.5em;
+    color: white;
+    font-weight: normal;
+    font-size: 1em;
+    text-align: center;
+    flex: 1;
+    transition: flex-grow 0.3s ease-in-out;
+    box-shadow: 0.1em 0.1em 0.1em gray
+}
+
+.ic {
+    padding-bottom: 40px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: -40px;
+}
+
+.gt {
+    flex-grow: 0.6;
+}
+
+.gr1 {
+    flex-grow: 1;
+}
+
+.gr2 {
+    flex-grow: 2;
+}
+
+.gr3 {
+    flex-grow: 3;
+}
+
+
+.gr4 {
+    flex-grow: 4;
+}
+
+
+.gr5 {
+    flex-grow: 5;
+}
+
+
+.gr6 {
+    flex-grow: 6;
+}
+
+.gr7 {
+    flex-grow: 7;
+}
+
+.hover4:hover {
+    flex-grow: 4;
+    transition: flex-grow 0.3s ease-in-out;
+
+}
+
+.hover5:hover {
+    flex-grow: 5;
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+.hover3:hover {
+    flex-grow: 3;
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+.hover2:hover {
+    flex-grow: 2;
+    transition: flex-grow 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .item {
+        width: 100%;
+        height: 100%;
+        font-size: 2.5em;
+        flex-wrap: wrap;
+    }
+
+    .row {
+        height: auto;
+    }
+
+
+}
