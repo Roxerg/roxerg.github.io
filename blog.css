@@ -1,6 +1,9 @@
 body {
     margin: 0;
     font-family: "Abel";
+}
+
+html {
     background-color: black;
 }
 
@@ -28,7 +31,6 @@ body {
     background-color: transparent;
     padding: 5px;
     width: 45%;
-    height: 62%;
     margin: 10px;
     line-height: 1.5em;
     color: white;
