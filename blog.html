@@ -16,10 +16,21 @@
         <div class="item-blog container">
             <div class="row">
                 <div class="itm-blog">
-                    <div class="title-blog"> Posts</div>
-                    <div class="title-blog"> <a href="blog/frozen.html">Marxist Analysis of Frozen II</a></div>
-                    <div class="txt">
-                        
+                    <div class="title-blog">A Terrible Blog.</div>
+                    <br>
+                    <div class="filter-title">filters</div>
+                    <div class="filter"> <button class="hoverable" id="lang-lt">🇱🇹</button>
+                                         &nbsp;&nbsp;&nbsp;
+                                         <button class="hoverable" id="lang-eng">🇬🇧</button>
+                                         &nbsp;&nbsp;&nbsp;
+                                         <button class="hoverable" id="joke">🤡</button>
+                    </div>
+                    
+                    <br>
+                    <div id="entries">
+                        <div class="txt"> < 07-12-2019 > <a href="blog/frozen.html">Marxist Analysis of Frozen II 🤡</a></div>
+                        <div class="txt"> < 06-12-2019 > <a href="blog/frozen.html">test</a></div>
+                        <div class="txt"> < 05-11-2019 > <a href="blog/frozen.html">test2</a></div>
                     </div>
                     </div>
             </div>
@@ -36,3 +47,97 @@
 
 
 </html>
+
+<script>
+
+    let posts = [
+        {
+            filters: ["🤡"],
+            filename: "frozen.html",
+            date:  "07-12-2019",
+            title: "Marxist Analysis of Frozen II 🤡"
+        },
+        {
+            filters: ["🇱🇹", "🇬🇧", "🤡"],
+            filename: "frozen.html",
+            date:  "06-12-2019",
+            title: "whatever is enabled"
+        },
+        {
+            filters: ["🇱🇹"],
+            filename: "frozen.html",
+            date:  "03-12-2019",
+            title: "lithuanian only"
+        }
+    ]
+
+
+    let joke_filter = false;
+    let eng_filter  = true;
+    let lt_filter   = true;
+
+    updateList();
+
+    document.getElementById("lang-eng").onclick = toggleEnglish;
+    document.getElementById("lang-lt").onclick = toggleLithuanian;
+    document.getElementById("joke").onclick = toggleJoke;
+
+    function updateList() {
+
+        if(joke_filter) {
+            document.getElementById("joke").style.opacity = 1;
+        }
+        else {
+            document.getElementById("joke").style.opacity = 0.3;
+        }
+
+        if(eng_filter) {
+            document.getElementById("lang-eng").style.opacity = 1;
+        }
+        else {
+            document.getElementById("lang-eng").style.opacity = 0.3;
+        }
+
+        if(lt_filter) {
+            document.getElementById("lang-lt").style.opacity = 1;
+        }
+        else {
+            document.getElementById("lang-lt").style.opacity = 0.3;
+        }
+
+        console.log("lang-lt: " + lt_filter);
+        console.log("lang-eng: " + eng_filter);
+        console.log("joke: " + joke_filter);
+
+        let newposts = posts.filter(e => {
+            let joke = (joke_filter) ? (e.filters.includes("🤡")) : (false);
+            let lt   = (lt_filter)   ? (e.filters.includes("🇱🇹")) : (false);
+            let eng  = (eng_filter)  ? (e.filters.includes("🇬🇧")) : (false);
+            return joke || lt || eng;
+        })
+
+        document.getElementById("entries").innerHTML = newposts.map(e => {
+            return "<div class=\"txt\"> <" + e.date + "> <a href=\"blog/" + e.filename + "\">" +e.title+ "</a></div> ";
+        }).join('');
+
+    }
+
+    function toggleEnglish() {
+
+        eng_filter = !eng_filter;
+        updateList();
+    }
+
+    function toggleLithuanian() {
+
+        lt_filter = !lt_filter;
+        updateList();
+    }
+
+    function toggleJoke() {
+        joke_filter = !joke_filter;
+        updateList();
+    }
+
+
+</script>

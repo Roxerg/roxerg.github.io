@@ -8,9 +8,26 @@ html {
 }
 
 
+.hoverable {
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+.hoverable:hover {
+    opacity: 1;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
 
 .title-blog {
-    font-size: 1em;
+    font-size: 1.9em;
     text-align: center;
 }
 
@@ -18,6 +35,19 @@ html {
     font-size: 0.6em;
     line-height: 1.2em;
     text-align: left;
+}
+
+
+.filter-title {
+    font-size: 0.7em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.filter {
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align: center;
 }
 
 .itm-blog {
