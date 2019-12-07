@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    font-family: "Abel";
+    background-color: black;
+}
+
+
+
+.title-blog {
+    font-size: 1em;
+    text-align: center;
+}
+
+.txt {
+    font-size: 0.5em;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+.itm-blog {
+    padding: 5px;
+    margin: 5px;
+    font-weight: normal;
+    flex: 1;
+}
+
+.item-blog {
+    background-color: transparent;
+    padding: 5px;
+    width: 45%;
+    height: 62%;
+    margin: 10px;
+    line-height: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+}
