@@ -52,22 +52,10 @@
 
     let posts = [
         {
-            filters: ["🤡"],
+            filters: ["🤡", "🇬🇧"],
             filename: "frozen.html",
             date:  "07-12-2019",
             title: "Marxist Analysis of Frozen II 🤡"
-        },
-        {
-            filters: ["🇱🇹", "🇬🇧", "🤡"],
-            filename: "frozen.html",
-            date:  "06-12-2019",
-            title: "whatever is enabled"
-        },
-        {
-            filters: ["🇱🇹"],
-            filename: "frozen.html",
-            date:  "03-12-2019",
-            title: "lithuanian only"
         }
     ]
 
@@ -110,15 +98,49 @@
         console.log("joke: " + joke_filter);
 
         let newposts = posts.filter(e => {
-            let joke = (joke_filter) ? (e.filters.includes("🤡")) : (false);
-            let lt   = (lt_filter)   ? (e.filters.includes("🇱🇹")) : (false);
-            let eng  = (eng_filter)  ? (e.filters.includes("🇬🇧")) : (false);
-            return joke || lt || eng;
+
+            let joke = e.filters.includes("🤡");
+            let lt   = e.filters.includes("🇱🇹");
+            let eng  = e.filters.includes("🇬🇧");
+
+            if (joke_filter && lt_filter && eng_filter) {
+                return true;
+            }
+            else if (joke_filter && lt_filter ) {
+                return (joke && lt) || lt;
+            }
+            else if (joke_filter && eng_filter) {
+                return joke && eng;
+            } 
+            else if (eng_filter && lt_filter) {
+                return (eng || lt) && !joke;
+            }
+            else if (eng_filter) {
+                return eng && !joke;
+            }
+            else if (lt_filter) {
+                return lt && !joke;
+            } 
+            else if (joke_filter) {
+                return joke;
+            }
+            else {
+                return false;
+            }
         })
 
-        document.getElementById("entries").innerHTML = newposts.map(e => {
-            return "<div class=\"txt\"> <" + e.date + "> <a href=\"blog/" + e.filename + "\">" +e.title+ "</a></div> ";
-        }).join('');
+        let html_content = null;
+
+        if (newposts.length != 0) {
+            html_content = newposts.map(e => {
+                return "<div class=\"txt\"> <" + e.date + "> <a href=\"blog/" + e.filename + "\">" +e.title+ "</a></div> ";
+            }).join('');
+        }
+        else {
+            html_content = "<div class=\"filter-title\">Nothing here (...yet!) try some other filters. </div>";
+        }
+
+        document.getElementById("entries").innerHTML = html_content;
 
     }
 
