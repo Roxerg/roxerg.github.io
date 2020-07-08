@@ -16,7 +16,7 @@
         <div class="item-blog container">
             <div class="row">
                 <div class="itm-blog">
-                    <div class="title-blog">A Terrible Blog.</div>
+                    <div class="title-blog">A Terrible Blog.<button class="smol" title="🔆">🔆</button></div>
                     <br>
                     <div class="filter-title">filters</div>
                     <div class="filter"> <button class="hoverable" id="lang-lt">🇱🇹</button>
@@ -28,6 +28,8 @@
                     
                     <br>
                     <div id="entries">
+                        <div class="txt"> < 08-07-2020 > <a href="blog/folding">Folding Code Until It's Readable</a></div>
+                        <div class="txt"> < 07-07-2020 > <a href="blog/authenticity">Authenticity and Content Creation</a></div>
                         <div class="txt"> < 07-12-2019 > <a href="blog/frozen">Marxist Analysis of Frozen II 🤡</a></div>
                     </div>
                     </div>
@@ -47,8 +49,13 @@
 </html>
 
 <script>
-
     let posts = [
+        {
+            filters: ["🇬🇧"],
+            filename: "folding",
+            date:  "08-07-2020",
+            title: "Folding Code Until It's Readable"
+        },
         {
             filters: ["🇬🇧"],
             filename: "authenticity",
