@@ -23,9 +23,10 @@
                         <br><br>
                         <p>Code folding is probably nothing new for most developers, whether they use it or not. Modern IDEs and code editors usually display markings for automatically foldable parts of code that you can click to hide a snippet of code such as a method definition. </p>
                         <p>What might be a slightly less known feature is that a lot of languages offer markings for custom foldable regions. For example, in C# you would use:</p>
-                        <pre><code class='language-c#' lang='c#'>#region OPTIONAL_IDENTIFIER
-                            -- foldable code here --
-                        #endregion
+                        <pre><code class='language-c#' lang='c#'>
+#region OPTIONAL_IDENTIFIER
+    -- foldable code here --
+#endregion
                         </code></pre>
                         <p>C# was the language where I firs learned about this practice (not a jab at it&#39;s verbosity, simply first larger project I laid my hands on), and then forgot about it for years.</p>
                         <p>I remembered it again while working with <a href='https://flutter.dev/'>Flutter</a>. I found that widget definitions were of a length where they were bulky enough to annoy me while navigating code, but not quite big enough to warrant a separate file (in my opinion, as a Dart novice), thus it was a perfect opportunity for me to start using folding again. And as with any new toy, I played with it possibly more than needed.</p>
