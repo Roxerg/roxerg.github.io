@@ -41,6 +41,7 @@ button, input[type="submit"], input[type="reset"] {
 .title-blog {
     font-size: 1.9em;
     text-align: center;
+    line-height: 1.8em;
 }
 
 .txt {
