@@ -80,3 +80,15 @@ button, input[type="submit"], input[type="reset"] {
     font-weight: bold;
     font-size: 2em;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    .item-blog {
+        width: 95%;
+    }
+
+
+
+
+}
