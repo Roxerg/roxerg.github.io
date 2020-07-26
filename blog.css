@@ -88,6 +88,13 @@ button, input[type="submit"], input[type="reset"] {
         width: 95%;
     }
 
+    .container {
+        width: 95%;
+    }
+
+    .row {
+        height: auto;
+    }
 
 
 
