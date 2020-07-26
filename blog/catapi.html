@@ -1,0 +1,103 @@
+<html>
+
+<head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="../main.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="../blog.css"/>
+    
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+
+        <meta property="og:title" content="Cat API">
+        <meta property="og:description" content="The greatest API for dummy data there is">
+
+        <meta property="og:image" content="https://roxerg.github.io/images/blog/catapi.jpg">
+        <meta name="twitter:image" content="https://roxerg.github.io/images/blog/catapi.jpg">
+
+        <meta property="og:url" content="https://roxerg.github.io/blog/catapi">
+        <meta name="twitter:card" content="summary">
+        
+</head>
+
+
+<body>
+
+    <div class="container">
+        <div class="item-blog container">
+            <div class="row">
+                <div class="itm-blog">
+                    <div class="title-blog">Cat 🐈 API</div>
+                    <div class="txt">
+                        <br><br>
+                        26-07-2020
+                        <br><br>
+                            <img id="catto" src="" alt="Catto">
+                            <p>Today I discovered the most important API on the Internet - <a href='https://thecatapi.com/'>The Cat API</a>. As far as I know, it is the most direct way of receiving cats from the web, (even more than the lovely <a href='http://random.cat/'>random.cat</a>). It is also a role model for any API. </p>
+                            <p>The site contains thorough documentation, a roadmap, a forum, and some examples of the API in action. This kind of thoroughness and level of communication is quite rare, even among services that are paid. Hell, half the APIs that companies brought for use in hackathons could not hold a candle to performance and documentation of this glorious API. </p>
+                            <p>Okay, but besides presentation, this is a great choice for dummy endpoints for your projects (or non-dummy, if your project is cat-related), especially if they deal with user content and images. The Cat API provides randomized images of various sizes, so it&#39;s great for testing whether everything displays correctly. There are also endpoints that return some string, integer data, and wikipedia links. Oh, there are public <em>and</em> auth-requiring endpoints, too. </p>
+                            <p>And yes this page is fetching random cats from that API.</p>
+                            <p>This post is part of my attempt at <a href='https://100daystooffload.com/'>#100DaysToOffload</a>.</p>
+                        <br><br>
+                        <br><br>
+                        <div class="title-blog"> <a href="../blog.html">other entries</a> </div>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        <br><br>
+                        
+                    </div>
+                    </div>
+            </div>
+
+        </div>            
+    </div>
+
+</a>
+
+</body>
+
+
+
+
+
+</html>
+
+
+<style>
+
+#catto {
+    max-width: 500px;
+    max-height: 300px;
+    align-items: center;
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+
+</style>
+
+<script>
+
+httpGetAsync(function(e) {
+    console.log(e[0].url);
+    document.getElementById("catto").src = e[0].url;
+})
+
+function httpGetAsync(callback)
+{
+
+    var req = "https://api.thecatapi.com/v1/images/search"
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(JSON.parse(xmlHttp.responseText));
+    }
+    xmlHttp.open("GET", req, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+
+
+</script>
