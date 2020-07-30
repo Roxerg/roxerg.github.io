@@ -3,18 +3,8 @@ body {
     font-family: "Abel";
 }
 
-html {
+.html_blog {
     background-color: black;
-}
-
-
-/* TODO: light theme */
-.smol {
-    margin: 0;
-    color: transparent;
-    text-shadow: 0 0 0px white;
-    position: relative;
-    font-size: xx-small;
 }
 
 
@@ -70,30 +60,43 @@ button, input[type="submit"], input[type="reset"] {
     flex: 1;
 }
 
+
 .item-blog {
     background-color: transparent;
     padding: 5px;
-    width: 45%;
     margin: 10px;
     line-height: 1.5em;
     color: white;
     font-weight: bold;
     font-size: 2em;
+    
 }
 
 
-@media only screen and (max-width: 600px) {
+
+@media screen and (max-width: 600px) {
 
     .item-blog {
-        width: 95%;
+        width: 100%;
     }
 
     .container {
-        width: 95%;
+        width: 100%;
+    }
+
+    .itm-blog {
+        width: 100%;
+        align-self:center;
+        align-items: center;
+        
     }
 
     .row {
         height: auto;
+    }
+
+    .txt {
+        font-size: 10em;
     }
 
 

@@ -231,8 +231,105 @@ a {
     transition: flex-grow 0.3s ease-in-out;
 }
 
+
+/* * * * BLOG STUFF * * * */
+body {
+    margin: 0;
+    font-family: "Abel";
+}
+
+.html_blog {
+    background-color: black;
+}
+
+
+
+.hoverable {
+    opacity: 0.3;
+    transition: opacity 0.3s ease-in-out;
+}
+.hoverable:hover {
+    opacity: 1;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    -webkit-appearance: none;
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.title-blog {
+    font-size: 1.9em;
+    text-align: center;
+    line-height: 1em;
+}
+
+.txt {
+    font-size: 0.6em;
+    line-height: 1.2em;
+    text-align: left;
+}
+
+
+.filter-title {
+    font-size: 0.7em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.filter {
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.itm-blog {
+    padding: 5px;
+    margin: 5px;
+    font-weight: normal;
+    flex: 1;
+    align-self: center;
+}
+
+
+.item-blog {
+    background-color: transparent;
+    padding: 5px;
+    margin: 10px;
+    line-height: 1.5em;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    
+}
+
+
+
 @media only screen and (max-width: 600px) {
 
+    /* BLOG */
+    .item-blog {
+        width: 100%;
+    }
+
+    .itm-blog {
+        align-self:center;
+        align-items: center;
+        width: 100%;
+        
+    }
+
+    .txt {
+        font-size: 4em;
+    }
+
+
+    /* INDEX */
     .container {
         width: 100%;
     }
