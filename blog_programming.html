@@ -1,0 +1,190 @@
+<html class="html_blog">
+
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- <link rel="stylesheet" type="text/css" href="main.css"/> -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="retro.css"/>
+        <!-- <link rel="stylesheet" type="text/css" media="screen" href="blog.css"/> -->
+
+</head>
+
+
+<body>
+
+                <div class="centered">
+  
+                    <h4 class="title-blog">A Terrible Blog.</h4>
+                    <div>by <a href="/">Rokas G</a>&nbsp;&nbsp;
+                        <a href="https://github.com/Roxerg"><i class="fab fa-github-alt"></i></a>
+                        <a href="https://twitter.com/roxerg1/"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:rgudav@gmail.com"><i class="fas fa-envelope"></i></a></div>
+                    <br>
+                    <br>
+                    <div><a>all</a> | <a>programming</a> </div>
+                    <br>
+                    <br>
+                    <div id="entries">
+                        <div class="txt"> <26-07-2020> <a href="blog/catapi">Cat 🐈 API</a></div>
+                        <div class="txt"> <15-07-2020> <a href="blog/gamejam">Game Jams Rule, Hackathons Drool</a></div>
+                        <div class="txt"> <08-07-2020> <a href="blog/folding">Folding Code Until It's Readable</a></div>
+                    </div>
+
+
+                </div>
+
+        
+
+</body>
+
+
+
+
+
+</html>
+
+<script>
+    let posts = [
+        {
+            filters: ["🇬🇧"],
+            filename: "catapi",
+            date:  "26-07-2020",
+            title: "Cat 🐈 API"
+        },
+        {
+            filters: ["🇬🇧"],
+            filename: "gamejam",
+            date:  "15-07-2020",
+            title: "Game Jams Rule, Hackathons Drool"
+        },
+        {
+            filters: ["🇬🇧"],
+            filename: "folding",
+            date:  "08-07-2020",
+            title: "Folding Code Until It's Readable"
+        },
+        {
+            filters: ["🇬🇧"],
+            filename: "authenticity",
+            date:  "07-07-2020",
+            title: "Authenticity and Content Creation"
+        },
+        {
+            filters: ["🤡", "🇬🇧"],
+            filename: "frozen",
+            date:  "07-12-2019",
+            title: "Marxist Analysis of Frozen II 🤡"
+        },
+        
+    ]
+
+
+
+    /*
+
+    let joke_filter = false;
+    let eng_filter  = true;
+    let lt_filter   = true;
+
+    updateList();
+
+    document.getElementById("lang-eng").onclick = toggleEnglish;
+    document.getElementById("lang-lt").onclick = toggleLithuanian;
+    document.getElementById("joke").onclick = toggleJoke;
+
+    function updateList() {
+
+        if(joke_filter) {
+            document.getElementById("joke").style.opacity = 1;
+        }
+        else {
+            document.getElementById("joke").style.opacity = 0.3;
+        }
+
+        if(eng_filter) {
+            document.getElementById("lang-eng").style.opacity = 1;
+        }
+        else {
+            document.getElementById("lang-eng").style.opacity = 0.3;
+        }
+
+        if(lt_filter) {
+            document.getElementById("lang-lt").style.opacity = 1;
+        }
+        else {
+            document.getElementById("lang-lt").style.opacity = 0.3;
+        }
+
+        console.log("lang-lt: " + lt_filter);
+        console.log("lang-eng: " + eng_filter);
+        console.log("joke: " + joke_filter);
+
+        let newposts = posts.filter(e => {
+
+            let joke = e.filters.includes("🤡");
+            let lt   = e.filters.includes("🇱🇹");
+            let eng  = e.filters.includes("🇬🇧");
+
+            if (joke_filter && lt_filter && eng_filter) {
+                return true;
+            }
+            else if (joke_filter && lt_filter ) {
+                return (joke && lt) || lt;
+            }
+            else if (joke_filter && eng_filter) {
+                return joke && eng;
+            } 
+            else if (eng_filter && lt_filter) {
+                return (eng || lt) && !joke;
+            }
+            else if (eng_filter) {
+                return eng && !joke;
+            }
+            else if (lt_filter) {
+                return lt && !joke;
+            } 
+            else if (joke_filter) {
+                return joke;
+            }
+            else {
+                return false;
+            }
+        })
+
+        let html_content = null;
+
+        if (newposts.length != 0) {
+            html_content = newposts.map(e => {
+                return "<div class=\"txt\"> <" + e.date + "> <a href=\"blog/" + e.filename + "\">" +e.title+ "</a></div> ";
+            }).join('');
+        }
+        else {
+            html_content = "<div class=\"filter-title\">Nothing here (...yet!) try some other filters. </div>";
+        }
+
+        document.getElementById("entries").innerHTML = html_content;
+
+    }
+
+    function toggleEnglish() {
+
+        eng_filter = !eng_filter;
+        updateList();
+    }
+
+    function toggleLithuanian() {
+
+        lt_filter = !lt_filter;
+        updateList();
+    }
+
+    function toggleJoke() {
+        joke_filter = !joke_filter;
+        updateList();
+    }
+
+    */
+
+
+</script>
