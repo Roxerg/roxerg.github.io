@@ -1,5 +1,22 @@
 
 
+
+
+
+/* CUSTOM */
+.centerimg {
+    max-width: 20em;
+    max-height: 30em;
+    align-items: center;
+    align-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+/* CUSTOM END */
+
+
 pre,
 code {
   font-family: Menlo, Monaco, "Courier New", monospace;
