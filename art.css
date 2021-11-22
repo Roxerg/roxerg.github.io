@@ -1,0 +1,122 @@
+
+
+.a {
+    font-size: 0.8em;
+    color: white;
+    line-height: 1.0em;
+    mix-blend-mode: difference;
+}
+
+
+.aaa {
+    line-height: 0.9em;
+}
+
+.aaaa {
+    line-height: 1.5em;
+}
+
+#x {
+    isolation: isolate;
+}
+
+.aaaaa {
+    line-height: 3em;
+}
+
+.eee {
+    margin-left: 2em;
+}
+
+.eeeeeee {
+    margin-left: 5em;
+}
+
+.eeeeeeee {
+    line-height: 0.2em;
+    margin-left: 9em;
+}
+
+
+.dd {
+    background-color: black;
+    mix-blend-mode: difference;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 400px;
+}
+
+.ddd {
+    background-color: black;
+    mix-blend-mode: difference;
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    top: 50px;
+    left: 0px;
+}
+
+.dddd {
+    background-color: black;
+    mix-blend-mode: difference;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 500px;
+    left: 500px;
+}
+
+.ddddd {
+    background-color: black;
+    mix-blend-mode: difference;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 300px;
+    left: 400px;
+}
+
+.b {
+    background-color: black;
+    mix-blend-mode: difference;
+    position: absolute; 
+    width: 10px;
+    height: 5000px;
+}
+
+.dddddd {   
+    top: 100px;
+    left: 1000px;
+}
+
+.ddddddd {
+    top: 100px;
+    left: 1100px;
+}
+
+.dddddddd {
+    top: 100px;
+    left: 1178px;
+}
+.ddddddddd {
+    top: 100px;
+    left: 1120px;
+}
+
+.dddddddddd {
+    top: 100px;
+    left: 1221px;
+}
+
+.ddddddddddd {
+    top: 100px;
+    left: 995px;
+}
+
+
+.dddddddddddd {
+    top: 100px;
+    left: 1243px;
+}
