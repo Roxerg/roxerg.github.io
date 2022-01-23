@@ -1,0 +1,74 @@
+p,
+label {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 30vh);
+    gap: 10px;
+    grid-auto-rows: minmax(10px, auto);
+    transition: all 0.7s;
+}
+
+.win {
+    width: 90vh;
+    gap: 0px;
+    border-width: 5px;
+    border-color: #4caf50;
+    border-style: solid;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 30vh);
+    gap: 0px;
+    grid-auto-rows: 30vh;
+    scroll-snap-type: both mandatory;
+}
+
+
+
+.visiblescroll::-webkit-scrollbar {
+    display:none;
+}
+
+
+.square {
+    width: 30vh;
+    height: 30vh;
+    overflow-x:scroll;
+    overflow-y: scroll;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    /* margin: 5px 5px 5px 5px; */
+    border-width: 4px;
+    border-color: transparent;
+    border-style: solid;
+    -webkit-box-shadow: 0 0 10px transparent;
+    box-shadow: 0 0 10px transparent;
+    border-radius: 5px;
+}
+
+.correct {
+    border-color: #4caf50;
+    -webkit-box-shadow: 0 0 10px #4caf50;
+    box-shadow: 0 0 10px #4caf50;
+}
+
+.end {
+    border-radius: 0px;
+    border-width: 0px;
+}
+
+
+
+
+
+img {
+    width: 30vh;
+    height: 30vh;
+    scroll-snap-stop: always;
+    scroll-snap-align: center;
+    pointer-events: none;
+}

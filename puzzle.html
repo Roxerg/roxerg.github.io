@@ -1,0 +1,176 @@
+<html>
+<head>
+    <link rel="stylesheet" href="puzzle-style.css">
+</head>
+<body>
+
+    <div>
+        <div id="game" class="container">
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+            <div class="square image-grid"></div>
+        </div>
+        <div>
+            <input id="togglescroll" type="checkbox" id="scales" name="scales"
+                   >
+            <label for="scales">Show Scrollbars</label>
+          </div>
+    </div>
+</body>
+
+
+<script>
+    const squares = document.getElementsByClassName("square");
+    
+
+    const correctCoords = []
+    const intertwinedMap = {}
+
+    let isScrolling
+
+    for (let squareIdx = 0; squareIdx < squares.length; squareIdx++) {
+        const vals = [0,1,2,3,4,5,6,7,8]
+        intertwinedMap[squareIdx] = []
+        let x = 0
+        let y = 0
+        while (vals.length > 0) {
+            const img = document.createElement("img");
+            const imgPick = vals.splice(Math.floor(Math.random() * vals.length), 1)[0]
+            img.src = `puzzle-bits/${imgPick}.jpg`
+            squares[squareIdx].appendChild(img)
+
+            if (imgPick === squareIdx) {
+                correctCoords.push({
+                    x: x,
+                    y: y
+                })
+            }
+
+            if (x < 2) {
+                x += 1
+            } else {
+                x = 0
+                y += 1
+            }
+        }
+        
+    }
+
+    let i = 0;
+    let ticking = false
+
+    const max = squares[0].scrollHeight
+
+    const correctSet = new Set()
+
+    for (let x=0; x<3; x++) {
+        for (let y=0; y<3; y++) {
+
+            squares[i].scrollTop = (max/3)*correctCoords[i].y
+            squares[i].scrollLeft = (max/3)*correctCoords[i].x
+            
+            const ii = i
+            squares[i].addEventListener('scroll', function(e) {
+                let lastY = Math.floor(squares[ii].scrollTop / Math.floor(max/3));
+                let lastX = Math.floor(squares[ii].scrollLeft / Math.floor(max/3));
+
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+
+                    // doSomething(lastKnownScrollPosition);
+                    // Clear our timeout throughout the scroll
+	                window.clearTimeout( isScrolling );
+
+                    // Set a timeout to run after scrolling ends
+                    isScrolling = setTimeout(function() {
+
+                        //console.log(ii, correctCoords[ii], {lx: lastX, ly: lastY}, {X: squares[ii].scrollLeft, Y: squares[ii].scrollTop}, max/3)
+                        if (correctCoords[ii].x == lastX && correctCoords[ii].y == lastY) {
+                            console.log('CORRECT')
+                            squares[ii].classList.add('correct')
+                            correctSet.add(ii)
+                            //squares[ii].style.overflow = "hidden"
+                            //squares[ii].scrollTop = (max/3)*lastX
+                            //squares[ii].scrollLeft = (max/3)*lastY
+                        } else {
+                            correctSet.delete(ii)
+                            squares[ii].classList.remove('correct')
+                        }
+
+                        if (correctSet.size === 9) {
+                            for (let w=0; w<9; w++) {
+                                squares[w].classList.remove('correct')
+                                squares[w].classList.add('end')
+                            }
+                            const wholeGrid = document.getElementById('game')
+                            wholeGrid.classList.add('win')
+                            wholeGrid.classList.add('correct')
+                        }
+
+                    }, 500);
+
+                    ticking = false;
+                });
+
+                ticking = true;
+                }
+            });
+            i += 1
+        }
+    }
+    i = 0
+    for (let x=0; x<3; x++) {
+        for (let y=0; y<3; y++) {
+
+            const optsY = [0,1,2].filter((e) => e !== correctCoords[i].y)
+            const optsX = [0,1,2].filter((e) => e !== correctCoords[i].x)
+
+            squares[i].scrollTop = (max/3)*optsY[Math.floor(Math.random() * optsY.length)]
+            squares[i].scrollLeft = (max/3)*optsX[Math.floor(Math.random() * optsX.length)]
+            
+            squares[i].classList.add('visiblescroll')
+            i += 1
+        }
+    }
+
+    let ticked = true
+
+    document.getElementById('togglescroll').addEventListener("click", enableScrollbars)
+
+    function enableScrollbars() {
+        ticked = !ticked
+        for (let b=0; b<9; b++) {
+            if (ticked) {
+                squares[b].classList.add('visiblescroll')
+            } else {
+                squares[b].classList.remove('visiblescroll')
+            }
+            
+        }
+    }
+
+    /* TODO:
+
+    https://htmldom.dev/drag-to-scroll/
+
+    for some satisfaction
+
+    // then can use this without fear of bad / unintuitive UX:
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    */
+    
+
+</script>
+
+</html>
+
