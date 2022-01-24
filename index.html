@@ -76,6 +76,15 @@
                     <!-- <div class="bigpro"><a href="https://vapor.rokasg.tech/" target="_blank">vapor</a></div> -->
                     <!-- <div class="bigpro"><a href="https://snake.rokasg.tech/" target="_blank">snake</a></div> -->
                 </div>
+                <div class="itm gt otherers">
+                    <div class="bigboi">consecutive days of reading:</div>
+                    <div id="readingcount" class="firstline">???</div>
+                    <!-- <div class="bigpro"><a href="https://vapor.rokasg.tech/" target="_blank">vapor</a></div> -->
+                    <!-- <div class="bigpro"><a href="https://snake.rokasg.tech/" target="_blank">snake</a></div> -->
+                </div>
+                <div>
+
+                </div>
                 
             </div>
             <div class="row">
@@ -136,9 +145,8 @@
             // for the changing title on the description block
           if (((new Date().getTime() / 1000) - yetanothertrackerer) > 3) {
             yetanothertrackerer = new Date().getTime() / 1000;
-            titles = ["Friend", "Enemy", "Potential Employer", "Current Employer", "Confused Recruiter", "Spambot", "Lover",
-                      "Jeremy Corbyn", "Sweetheart", "Traveller", "Developer", "Guy", "Lady", "Tim", "Blogger", "Cutie",
-                      "Beautiful", "Bucko", "Pardner", "???", "Lord", "M'lady", "Brogrammer", "Programmer", "Environmentalist",
+            titles = ["Friend", "Enemy", "Potential Employer", "Current Employer", "Confused Recruiter", "Spambot", "Sweetheart", "Traveller", "Developer", "Guy", "Lady", "Tim", "Blogger", "Cutie",
+                      "Beautiful", "Bucko", "Pardner", "???", "M'lord", "M'lady", "Brogrammer", "Programmer", "Rebel",
                      "Philosopher", "Reader", "This one is just for breaking my own page ahhaahahahahahaha", "Traveller", "Surfer",
                     "Internet Person", "Corporation", "Google", "Dad", "Mom", "Friend", "You", "Me?!"]
             var idxx = Math.floor((Math.random() * titles.length));
@@ -189,6 +197,21 @@
           }
     
       },110);
+
+
+      // for reading tracker
+
+      readingCount = document.getElementById("readingcount")
+      readingUrl = "https://read-daily.herokuapp.com/today?user=roxerg"
+
+      fetch(readingUrl).then(function(response) {
+        response.text().then(function(text) {
+            if (!isNaN(text)) {
+                readingCount.textContent = text;
+            }
+        });
+        });
+
     </script>
 
 
