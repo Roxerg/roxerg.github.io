@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+    <h1>Just Write</h1>
+    <img class="image" src="/assets/images/justwrite.png" alt="Derp face">
+<p>I cought myself policing ideas for this blog, finding myself thinking &quot;Oh I could expand on that&quot; or &quot;no that's not worthy of being a post&quot;. From past experiences, all that leads to is... not writing anything. So here is this post, just to spite myself.</p>
+<p>If this got posted, anything can get posted.</p>
+<p>Which was the entire point of this whole exercise.</p>
+<p>Also, I thought it'd be nice to include these sketches as banner images from now on.</p>
+
+    <a class="center" href="/">back</a>
+
+      
+      
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>

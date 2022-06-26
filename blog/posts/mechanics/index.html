@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+    <h1>Expressing Concepts via Game Mechanics</h1>
+    <img class="image" src="/assets/images/envirobear.png" alt="Catto fetched from CatAPI here">
+<p>Through their interactive nature, games have a unique advantage over other mediums to convey ideas. This probably sounds like an incredibly obvious notion. However, I am specifically interested in ways to teach real world concepts intuitively. This hit me after experiencing something akin to <a href="https://en.wikipedia.org/wiki/Frequency_illusion">Baader-Meinhof phenomenon</a> for months since playing Democratic Socialism Simulator.</p>
+<p><a href="https://molleindustria.itch.io/democratic-socialism-simulator">Democratic Socialism Simulator</a> is what you would get if you mixed political simulator with Tinder. It's extremely streamlined and simplified... &quot;simulator&quot;. But what stuck with me the most were the two conflicting goals of environmentalism and workers rights. These ideas, expressed as simple bars that go up and down, helped me realize how these concepts, while often both identified as part of leftist policies, are at odds in our complex and multivariate world. Every time I read a news article about either of these topics, I would automatically consider the other.</p>
+<p>I was very impressed how this little game managed to have such a profound effect on my thinking. Of course this is not unique to this one random title, and examples of these learning experiences, less or more subtle, can be seen all around. As an example that conveniently follows on the environmental angle, <a href="https://factorio.com/">Factorio</a> allows players to feel how industrial growth requires sacrifice of environment, spreads pollution, and requires expansionism to obtain natural resources required to maintain the system.</p>
+<p>Both of these examples are vague and unspecific, but they can shape the way you think about the world, which is what I found so fascinating. I don't have a bigger point besides that it's just... possible and shows the possibilities available with this art form... <a href="https://i.kym-cdn.com/photos/images/newsfeed/001/802/684/d15.jpg">I just thought it's neat</a>, really.</p>
+<p>This post is part of my attempt at <a href="https://100daystooffload.com/">#100DaysToOffload</a>.</p>
+
+    <a class="center" href="/">back</a>
+
+      
+      
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>

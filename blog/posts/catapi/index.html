@@ -1,0 +1,75 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+    <h1>Cat 🐈 API</h1>
+    <img class="image" id="catto" src="" alt="Catto fetched from CatAPI here">
+<p>Today I discovered the most important API on the Internet - <a href="https://thecatapi.com/">The Cat API</a>. As far as I know, it is the most direct way of receiving cats from the web, (even more than the lovely <a href="http://random.cat/">random.cat</a>). It is also a role model for any API.</p>
+<p>The site contains thorough documentation, a roadmap, a forum, and some examples of the API in action. This kind of thoroughness and level of communication is quite rare, even among services that are paid. Hell, half the APIs that companies brought for use in hackathons could not hold a candle to performance and documentation of this glorious API.</p>
+<p>Okay, but besides presentation, this is a great choice for dummy endpoints for your projects (or non-dummy, if your project is cat-related), especially if they deal with user content and images. The Cat API provides randomized images of various sizes, so it's great for testing whether everything displays correctly. There are also endpoints that return some string, integer data, and wikipedia links. Oh, there are public and auth-requiring endpoints, too.</p>
+<p>I do have to warn that if this is used for testing, dev time might turn into cat scrolling time. Totally not speaking from experience.</p>
+<p>And yes this page is fetching random cats from that API.</p>
+<p>This post is part of my attempt at <a href="https://100daystooffload.com/">#100DaysToOffload</a>.</p>
+<script>
+httpGetAsync(function(e) {
+    document.getElementById("catto").src = e[0].url;
+})
+
+function httpGetAsync(callback)
+{
+
+    var req = "https://api.thecatapi.com/v1/images/search"
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(JSON.parse(xmlHttp.responseText));
+    }
+    xmlHttp.open("GET", req, true); // true for asynchronous 
+    xmlHttp.send(null);
+}
+</script>
+
+    <a class="center" href="/">back</a>
+
+      
+      
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>

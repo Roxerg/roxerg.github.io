@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+    <h1>Authenticity and Content Creation</h1>
+    <p>So, with this post I'm kicking off my <a href="https://100daystooffload.com/">#100DaysToOffload</a>, which I am hoping will encourage me to make more blog posts than blog websites (This is my third, and I spent the least time on actually writing it. And it's static). I really liked the rules of this &quot;challenge&quot;, which are, essentially &quot;do whatever, just write&quot;.</p>
+<p>I decided to begin by combining my two favourite things - being meta and overthinking stuff. So this post is about overthinking creations and their relation to the attention economy (which includes this blog post!). I have been thinking a lot about authenticity after reading Adorno's <a href="https://www.goodreads.com/book/show/201385.The_Culture_Industry">Culture Industry</a>. Or, more accurately, over-applying the theory on everything. Fortunately, after some time I managed to stop thinking how every album I listen to is a commodity first, art later. I won't be applying anything from the book this time, it was just a catalyst for this rambling.</p>
+<p>To the point - I am conflicted about the authenticity of what I create in my spare time (concept of which also started giving me pause thanks to Mr Adorno), and it's... &quot;utility&quot;. There is this nagging drive for &quot;productivity&quot;, the constant search for a bottom line. This can come from a direct financial standpoint - &quot;how can I monetize this side project&quot;, which I can at least excuse with necessity, to some extent. Content (a beautifully absurdist term encapsulating essentially anything posted on the web) that cannot bring in money, can still be used for attention, CV-building and sweet <em>Fake Internet Points</em>™.</p>
+<p>These thoughts might be considered useful and pragmatic, and to a certain extent, they are. However, I find myself unable o break free from them to the point that these considerations prevent me from working on certain ideas that do not have sufficient showing off appeal. For example, I deliberated repeatedly about whether I should start a diary, or a blog. I pursued a mobile app idea over a game idea, because the former looks nicer on a CV, and involves more industry buzzwords. I even stop to think whether I should post a joke I came up with for a DM on my feed instead.</p>
+<p>In other words, consciously or not, I got obsessed with &quot;content creation&quot; over &quot;creation&quot;. After Culture Industry, I thought back to <a href="https://store.steampowered.com/app/303210/The_Beginners_Guide/">The Beginner's Guide</a>, this interactive narrative about a game developer who created games for nobody else but themselves (this is achieved by a creating a fictional game developer, and their &quot;friend&quot;, which is the one that exposes these games to the player, explaining how these personal games can be experienced by us). That is what I feel lacking, this expression of true authenticity, creation for its own sake, with no intention for anyone else besides the creator to see it, besides possibly offline friends. And I do not know if I can achieve that anymore, as this need for productivity is so ingrained in me I cannot resist it even after recognising it.</p>
+<p>There is a possible way to beat it, but it is challenging. If I were to replace my recreational consumption with recreational creation, I could possibly find the time to be authentic, while satisfying the productivity demons. But then my next blog post would be about the difficulty to find the time to just sit down, relax, and read a book...</p>
+
+    <a class="center" href="/">back</a>
+
+      
+      
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>

@@ -1,0 +1,82 @@
+html {
+    background-color: rgb(34, 34, 34);
+    color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+}
+
+.center {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+#content {
+    margin: auto;
+    width: 600px;
+}
+
+#title, #linkerinos {
+  text-align: center;
+}
+
+#title {
+  margin-bottom: 0px;
+}
+
+#linkerinos {
+  margin-bottom: 50px;
+}
+
+
+.orang {
+  color: orangered  ;
+}
+
+#footer {
+  padding-top: 200px;
+  text-align: center;
+  font-size: smaller;
+}
+
+.image {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: block;
+}
+
+.list-title {
+    float: left;
+}
+.list-date {
+    float: right;
+}
+.list-title, .list-date {
+    display: inline;
+}
+
+a:link {
+  color: orangered;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(224, 60, 0);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(255, 136, 93);
+  border-radius: 5px;   
+}
+
+a:active {
+  color: orangered;
+  background-color: transparent;
+  text-decoration: none
+}
+

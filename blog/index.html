@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+      
+      
+    
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/stillgotit/">Yup, I Still Like Programming</a>
+      </div>
+      <time class="list-date" datetime="2021-04-16T00:00:00.000Z">April 16, 2021</time>
+    </article>
+    <br>
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/mechanics/">Expressing Concepts via Game Mechanics</a>
+      </div>
+      <time class="list-date" datetime="2020-09-28T00:00:00.000Z">September 28, 2020</time>
+    </article>
+    <br>
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/justwrite/">Just Write</a>
+      </div>
+      <time class="list-date" datetime="2020-08-31T00:00:00.000Z">August 31, 2020</time>
+    </article>
+    <br>
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/catapi/">Cat 🐈 API</a>
+      </div>
+      <time class="list-date" datetime="2020-07-26T00:00:00.000Z">July 26, 2020</time>
+    </article>
+    <br>
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/gamejams/">Game Jams Rule, Hackathons Drool</a>
+      </div>
+      <time class="list-date" datetime="2020-07-15T00:00:00.000Z">July 15, 2020</time>
+    </article>
+    <br>
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/folding/">Folding Code Until It&#39;s Readable</a>
+      </div>
+      <time class="list-date" datetime="2020-07-08T00:00:00.000Z">July 8, 2020</time>
+    </article>
+    <br>
+  
+    <article class="list-item">
+      <div class="list-title">
+        <a href="/posts/authenticity/">Authenticity and Content Creation</a>
+      </div>
+      <time class="list-date" datetime="2020-07-07T00:00:00.000Z">July 7, 2020</time>
+    </article>
+    <br>
+  
+
+
+
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>

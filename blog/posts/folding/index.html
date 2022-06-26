@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+    <h1>Folding Code Until It&#39;s Readable</h1>
+    <p>Code folding is probably nothing new for most developers, whether they use it or not. Modern IDEs and code editors usually display markings for automatically foldable parts of code that you can click to hide a snippet of code such as a method definition.</p>
+<p>What might be a slightly less known feature is that a lot of languages offer markings for custom foldable regions. For example, in C# you would use:</p>
+<pre><code>#region OPTIONAL_IDENTIFIER
+    -- foldable code here --
+#endregion
+</code></pre>
+<p>C# was the language where I first learned about this practice (not a jab at it's verbosity, simply first larger project I laid my hands on), and then forgot about it for years.</p>
+<p>I remembered it again while working with <a href="https://flutter.dev/">Flutter</a>. I found that widget definitions were of a length where they were bulky enough to annoy me while navigating code, but not quite big enough to warrant a separate file (in my opinion, as a Dart novice), thus it was a perfect opportunity for me to start using folding again. And as with any new toy, I played with it possibly more than needed.</p>
+<p>I had some arrays where I stored multi-choice options for users (e.g. color picker). For readability, I formatted them in a way where each element was a new line. This, of course, lengthened the code significantly, so I was ready to fold it up. However, the IDE did not pick up arrays as automatically foldable, thus I remembered my experience with C# and looked for custom folding markers in Dart to find... <a href="https://github.com/dart-lang/sdk/issues/34795">that they do not exist</a>.</p>
+<p>Of course, this is far from a priority feature for any language, since folding can be implemented on the editor level, and there are already <a href="https://marketplace.visualstudio.com/items?itemName=maptz.regionfolder">extensions</a> that do exactly that for VS Code. <a href="https://vim.fandom.com/wiki/Folding">vim</a>, of course, has this feature built-in and expanded upon with multiple types of folding and customising capabilities. Reading about vim always makes switching feel very appealing.</p>
+<p>Is custom folding a good idea at all, though? for minimalists, the answer is probably no. If implemented at a language level, it probably adds precious fractions of a millisecond to interpret and parse the code, and of course language developer time, which could be used doing literally anything else.</p>
+<p>If you're not a minimalist, though, folding and even custom folding could be pretty useful while writing code. Yes, it is a tool that can be easily used to learn bad practices of cramping code into one file, and it's a bit crappy to use extension-exclusive syntax if you are not the only one working on the project. But if used responsibly, it's a great middle ground between having a bulky file and multiple files that feel just a tad too barren. And if you're stuck with some legacy code that has some 10,000-line monstrosities, this could be a perfect tool for you to prevent carpal tunnel from scrolling.</p>
+<p>This post is part of my attempt at <a href="https://100daystooffload.com/">#100DaysToOffload</a>.</p>
+
+    <a class="center" href="/">back</a>
+
+      
+      
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>

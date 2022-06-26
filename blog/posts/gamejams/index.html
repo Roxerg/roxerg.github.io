@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/shitposts.css">
+  <title>rokasg blog</title> 
+</head> 
+<body> 
+  <div id="content">
+    <h1 id="title"><span class="orang">rokas</span>' blo<span class="orang">g</span></h1>
+    <header id="linkerinos">
+      
+      <a href="/">posts</a> |
+      <a href="/shitposts">shitposts</a>
+    </header> 
+    <main> 
+      
+    <h1>Game Jams Rule, Hackathons Drool</h1>
+    <p>This weekend me with three friends made a <a href="https://nimja.itch.io/rewire">game</a> for the <a href="https://itch.io/jam/gmtk-2020">GMTK Game Jam</a>. It was a blast as always, though this was the first time I participated in one remotely. For the uninitiated, a game jam is a game development event with a very strict time limit (GMTK, for example, lasted 48 hours) and usually a theme.</p>
+<p>What I love most about game jams is how they give me the drive to create something. I found that what works best for my productivity are strict external deadlines, and these events are built directly around that. In addition, they provide direction in the form of a theme. Regular side-projects can accrue feature-creep really fast when they are in my hands, and potentially can even change direction completely as I inevitably start second-guessing the whole concept. Game jams rid me of all that by taking away just enough freedom, and giving a strict deadline.</p>
+<p>Another big part of game jams is, of course, the team, which also makes the project so much more exciting. I had the pleasure to work with someone who can draw and someone who can make music. It was incredible to see them create something in a few hours that I could not in months. The best part, of course, is connecting these elements into an interactive experience. My own contribution feels more significant when it incorporates these assets.</p>
+<p>Now, the rest of techy community also has similar events that are for general applications (sometimes including video games!) called hackathons. While similar in many regards, their distinction is what is going to help me explain what I love most about game jams.</p>
+<p>Hackathons also have strict time limits and themes. However, these themes are decided by sponsors, which are also present in the events. With sponsors come prizes, &quot;swag&quot;, and career considerations. Now, to be clear, there are hackathons without all that, and there are game jams with all that, but from my personal experience, majority of hackathons are bigger and sponsored, and game jams are smaller and more independent. This reflects the communities around them.</p>
+<p>Hackathons are usually involved with universities, are attended by students, sponsored by corporations that are looking for employees, and submissions are evaluated by a private jury or corporate representatives. Unavoidably, this creates a sense of competition. The submissions are usually rated based on a few minute &quot;pitch&quot;, which frames the project as a product, and put presentation above all else. Companies sometimes offer internships as prizes, which is a great prize, but contextualises the event in a bad light, where participants are expected to prove themselves by working without sleep to prove their employability.</p>
+<p>Meanwhile, game jam participants are rarely motivated by something else than passion, as there are no expectation of huge prizes. Often, the most rewarding experience is having people play your game and seeing them experience it. Developing for a game jam is just like working on a side project, except you pull free time out of thin air and even finish the damn thing. Your creative vision does not have to be compromised by anything, because winning is not the point - the process itself is.</p>
+<p>Now, to be honest, I do not actually hate hackathons, they do have their own purpose and it is not strictly bad to make something over the weekend that you can show off to employers. But as my <a href="https://roxerg.github.io/blog/authenticity">first blog post</a> might have revealed, I really value opportunities to create for it's own sake. Game Jams are exactly for that.</p>
+<p>P.S. I also have an urge to ramble on about the game dev community, but I believe this post already is a tad broad.</p>
+<p>This post is part of my attempt at <a href="https://100daystooffload.com/">#100DaysToOffload</a>.</p>
+
+    <a class="center" href="/">back</a>
+
+      
+      
+    </main> 
+    <footer id="footer">
+      days since last redesign: <span id="days"></span>
+      <br>
+      <a href="https://github.com/Roxerg">github</a> |
+      <a href="https://twitter.com/roxerg1">twitter</a>
+    </footer>
+  </div> 
+</body> 
+</html>
+
+<script>
+  var lastDate = "2022-06-26T12:00:00"
+  var diff = Math.floor((Date.now() - Date.parse(lastDate)) / (60*60*24 * 1000));
+  document.getElementById('days').innerHTML = diff
+  fetch('http://152.70.52.154:80/analytics', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: JSON.stringify({
+      url: window.location.href
+    }) 
+  })
+  
+</script>
