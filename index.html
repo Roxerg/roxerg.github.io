@@ -202,7 +202,7 @@
       // for reading tracker
 
       readingCount = document.getElementById("readingcount")
-      readingUrl = "https://read-daily.herokuapp.com/today?user=roxerg"
+      readingUrl = "https://read.rogu.rocks/api/today?user=roxerg"
 
       fetch(readingUrl).then(function(response) {
         response.text().then(function(text) {
