@@ -146,7 +146,7 @@ a {
     width: 35%;
     height: 62%;
     margin: 10px;
-    line-height: 1.5em;
+    line-height: 1.5emcenter;
     color: white;
     font-weight: bold;
     font-size: 2em;
@@ -308,6 +308,10 @@ button, input[type="submit"], input[type="reset"] {
     font-weight: bold;
     font-size: 2em;
     
+}
+
+.center {
+    text-align: center;
 }
 
 
